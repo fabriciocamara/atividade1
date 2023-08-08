@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #box1 {
+            background-color: brown;
+            width: 200px;
+            height: 200px;
+            padding: 200px;
+        }
+
+        .paragrafo {
+            background-color: chartreuse;
+            font-size: 18px;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        function funcaoTeste() {
+            //alert('Estou aqui')
+            document.getElementById("box1").style.backgroundColor = "blue";
+            document.getElementById("box1").style.textAlign = "center";
+            document.getElementById("box1").style.color = "#fff";
+
+            document.getElementsByClassName('paragrafo')[0].style.backgroundColor = "red";
+            document.getElementsByClassName('paragrafo')[1].style.backgroundColor = "blue";
+            document.getElementsByClassName('paragrafo')[2].style.backgroundColor = "green";
+
+            alert('Estou sendo chamado')
+
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Seletores</h1>
+
+    <div id="box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore repudiandae quibusdam nobis ex exercitationem. Corporis neque eligendi officia placeat possimus vitae sed molestias voluptatem facilis aliquid tempora quidem, numquam qui.
+    </div>
+
+    <input type="button" value="ACIONAR" onclick="javascript:funcaoTeste();" >
+
+    <p class="paragrafo">Paragrafo 1</p> <!-- 0 -->
+    <p class="paragrafo">Paragrafo 2</p> <!-- 1 -->
+    <p class="paragrafo">Paragrafo 3</p> <!-- 2 -->
+
+    <input type="text" name="cpf" onchange="javascript:funcaoTeste()">
+
+</body>
+</html>
